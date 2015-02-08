@@ -3,10 +3,14 @@
 var menu = function() {
 	//show the menu
 	var links = $('li');
+	index = 0
 	$('#face').mouseover(function() {
-		$('#menu').show(1000);
-		$('.liAnim').each(function() {
-			$(links).animate({marginTop: 1, opacity: 100}, 1000, 'linear')});
+		$('#menu').show(1000)//.animate({marginTop: 1, opacity: 100}, 1000, 'linear', function() {
+			/*$(links).each(function() {
+				$(this[index]).animate({marginTop: 1, opacity: 100}, 2000, 'linear');
+			});
+		});*/
+		
 		$(this).rotate({
 			duration: 2800,
 			animateTo: 360
