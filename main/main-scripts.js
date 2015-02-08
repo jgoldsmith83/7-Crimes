@@ -2,8 +2,11 @@
 //event handler to trigger the flyout menu
 var menu = function() {
 	//show the menu
+	var links = $('li');
 	$('#face').mouseover(function() {
-		$('#menu:hidden').show(1000),
+		$('#menu').show(1000);
+		$('.liAnim').each(function() {
+			$(links).animate({marginTop: 1, opacity: 100}, 1000, 'linear')});
 		$(this).rotate({
 			duration: 2800,
 			animateTo: 360
