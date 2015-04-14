@@ -13,10 +13,68 @@
 <table id="verify-table">
 	<tr>
 		<td>
-			<input type="button" id="over" value="I am 18+" onclick="legal_age()"/>
+			<p>You must be over 18. Please enter your age: </p>
 		</td>
+	</tr>
+	<tr>
 		<td>
-			<input type="button" id="under" value="Under 18" onclick="under_age()"/>
+			<select name='month'>
+				<option value='January' selected>January</option>
+				<option value='February'>February</option>
+				<option value='March'>March</option>
+				<option value='April'>April</option>
+				<option value='May'>May</option>
+				<option value='June'>June</option>
+				<option value='July'>July</option>
+				<option value='August'>August</option>
+				<option value='September'>September</option>
+				<option value='October'>October</option>
+				<option value='November'>November</option>
+				<option value='December'>December</option>
+			</select>
+
+			<select name='day'>
+				<option selected>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+				<option>13</option>
+				<option>14</option>
+				<option>15</option>
+				<option>16</option>
+				<option>17</option>
+				<option>18</option>
+				<option>19</option>
+				<option>20</option>
+				<option>21</option>
+				<option>22</option>
+				<option>23</option>
+				<option>24</option>
+				<option>25</option>
+				<option>26</option>
+				<option>27</option>
+				<option>28</option>
+				<option>29</option>
+				<option>30</option>
+				<option>31</option>
+			</select>
+
+			<input name='year'>
+			</input>
+		</td>
+	</tr>
+	<tr>
+		<td align='right'>
+			<input type="button" id="over" value="Check my age" onclick="legal_age()"/>
+			<!--<input type="button" id="under" value="Exit" onclick="under_age()"/>-->
 		</td>
 	</tr>
 </table>

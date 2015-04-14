@@ -1,33 +1,29 @@
 
-//event handler to trigger the flyout menu
 var menu = function() {
-	//show the menu
-	var links = $('li');
-	index = 0
 	$('#face').mouseover(function() {
-		$('#menu').show(1000)//.animate({marginTop: 1, opacity: 100}, 1000, 'linear', function() {
-			/*$(links).each(function() {
-				$(this[index]).animate({marginTop: 1, opacity: 100}, 2000, 'linear');
-			});
-		});*/
-		
-		$(this).rotate({
-			duration: 2800,
-			animateTo: 360
-		});
+		$(this).fadeTo('slow', 0.4);
+		//$('#menu:hidden').show(1000);
+	$('#home').fadeTo('fast', 1, function() {
+		$('#premium').fadeTo('fast', 1, function() {
+			$('#standard').fadeTo('fast',1, function() {
+				$('#order-info').fadeTo('fast', 1, function(){
+					$('#contact').fadeTo('fast', 1);
+				})
+			})
+		})
 	});
+	}); 
 	
-	//hide the menu
 	$('li').click(function() {
-		$('#menu:visible').hide(1000),
-		$('#face').rotate({
-			duration: 2800,
-			animateTo: -0
+		$(this).animate({color: 'red'}, 1100, function(){
+			$(this).animate({color: 'white'});
 		});
+		$('#face').fadeTo('slow', 1);
+		//$('#menu:visible').hide(1000);
+		$('.liAnim').fadeTo('slow', 0);
 	});
 }
 
-//event handlers for clicking the links in the flyout menu
 var homeClick = function() {
 	$('#home').click(function() {
 		var selection = document.getElementsByTagName('li')[0].id;
@@ -68,11 +64,12 @@ var actionHandlers = [menu, homeClick, premiumClick, standardClick, orderClick, 
 $(document).ready(actionHandlers);
 
 
-//this is the actual event handler for clicking the links - the handlers at the top call this function
+
 function reformMainDiv(selectionAttrib) {
 	var contentDiv = document.getElementById("content-div");
 	var titleChange = document.getElementsByTagName("title");
 	var change = document.getElementById("description");
+	var h3 = document.getElementById("h3");
 	
 	switch(selectionAttrib) {
 		case 'home':
@@ -80,37 +77,40 @@ function reformMainDiv(selectionAttrib) {
 			//alert("You clicked on Home");
 			
 			titleChange.innerHTML = "7 Crimes. An eJuice Co.";
-			change.innerHTML = "IT'S COMING.<br><br>For inquiries:<br>Send us an <a href='mailto:james@sevencrimes.com?Subject=Web%20Inquiry' target='_top'>Email</a>";
+			change.innerHTML = "IT'S COMING.";
+			h3.innerHTML = "Curators of Fine eJuice.";
 			break;
 		case 'premium':
 			contentDiv.innerhtml = ""; //reload div content
 			//alert("You clicked on Premium Line");
 			
 			titleChange.innerHTML = "7 Crimes. Premium Line.";
-			change.innerHTML = "Premium Line."
-			change.innerHTML += "<p id='labelp'><img id='GLlabel' src='../labels/grandlarceny3-display.png'/><br><br>  For inquiries:<br>  Send us an <a href='mailto:james@sevencrimes.com?Subject=Web%20Inquiry:%20Premium%20Line' target='_top'>Email</a></p>";
-			
+			change.innerHTML = "Premium Line.";
+			h3.innerHTML = "Enjoy our Premium Line.";
 			break;
 		case 'standard':
 			contentDiv.innerhtml = ""; //reload div content
 			//alert("You clicked on Standard Line");
 			
 			titleChange.innerHTML = "7 Crimes. Standard Line.";
-			change.innerHTML = "Standard Line.<br><br>For inquiries:<br>Send us an <a href='mailto:james@sevencrimes.com?Subject=Web%20Inquiry:%20Standard%20Line' target='_top'>Email</a>";
+			change.innerHTML = "Standard Line.";
+			h3.innerHTML = "Enjoy our Standard Line";
 			break;
 		case 'order-info':
 			contentDiv.innerhtml = ""; //reload div content
 			//alert("You clicked on Ordering Info");
 			
 			titleChange.innerHTML = "7 Crimes. Ordering Info.";
-			change.innerHTML = "For inquiries:<br>Send us an <a href='mailto:james@sevencrimes.com?Subject=Web%20Inquiry:%20Order%20Info' target='_top'>Email</a>";
+			change.innerHTML = "Ordering Info.";
+			h3.innerHTML = "How to Order eJuice.";
 			break;
 		case 'contact':
 			contentDiv.innerhtml = ""; //reload div content
 			//alert("You clicked on Contact Us");
 			
 			titleChange.innerHTML = "7 Crimes. Contact Us.";
-			change.innerHTML = "Contact Us.<br>For inquiries:<br>Send us an <a href='mailto:james@sevencrimes.com?Subject=Web%20Inquiry:%20General%20Contact' target='_top'>Email</a>";
+			change.innerHTML = "Contact Us.";
+			h3.innerHTML = "Send a Quick Note.";
 			break;
 		default:
 			alert("NO CONTENT TO DISPLAY");
