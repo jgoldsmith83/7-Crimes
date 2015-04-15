@@ -1,4 +1,4 @@
-var main_url = "../main/main.html"
+var main_url = ".../main/main.html"
 var under_url = "http://www.thetruth.com"
 var this_year = new Date().getFullYear();
 
