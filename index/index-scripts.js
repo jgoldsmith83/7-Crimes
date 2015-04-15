@@ -1,5 +1,6 @@
 var main_url = "../main/main.html"
 var under_url = "http://www.thetruth.com"
+var currYear = new Date().getFullYear();
 
 
 
@@ -8,7 +9,7 @@ function validate_age() {
 	var year = document.getElementById('year').value;
 	
 	
-	if (year < 1900) {
+	if (year < 1900 || year > currYear) {
 		alert("Please enter a valid birthdate");
 	} else if  (age_year < 18) {
 		alert("Sorry, we can't let you in if you're under 18. Thanks for understanding!");
