@@ -1,15 +1,6 @@
 var main_url = "../main/main.html"
 var under_url = "http://www.thetruth.com"
-var this_year = new Date().getFullYear();
 
-
-var legalAge = function() {
-	window.location.href = main_url;
-}
-
-var underAge = function() {
-	window.location.href = under_url;
-}
 
 
 function validate_age() {
@@ -43,6 +34,14 @@ var birthDate = function() {
 	var dateNum = parseInt(dateSplit[0]);
 
 	return dateNum
+}
+
+var legalAge = function() {
+	window.location.href = main_url;
+}
+
+var underAge = function() {
+	window.location.href = under_url;
 }
 
 

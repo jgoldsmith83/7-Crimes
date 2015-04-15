@@ -47,12 +47,3 @@ var birthDate = function() {
 
 
 
-/*
-var legal_age = function() {
-	legalAge();
-}
-
-var under_age = function() {	
-	underAge();
-}
-*/
