@@ -3,19 +3,19 @@ var menu = function() {
 	$('#face').mouseover(function() {
 		$(this).fadeTo('slow', 0.4);
 		//$('#menu:hidden').show(1000);
-		$('#home').fadeTo('fast', 1, function() {
-			$('#premium').fadeTo('fast', 1, function() {
-				$('#standard').fadeTo('fast',1, function() {
-					$('#order-info').fadeTo('fast', 1, function(){
-						$('#contact').fadeTo('fast', 1);
-					})
+	$('#home').fadeTo('fast', 1, function() {
+		$('#premium').fadeTo('fast', 1, function() {
+			$('#standard').fadeTo('fast',1, function() {
+				$('#order-info').fadeTo('fast', 1, function(){
+					$('#contact').fadeTo('fast', 1);
 				})
 			})
-		});
+		})
+	});
 	}); 
 	
 	$('li').click(function() {
-		$(this).animate({color: 'red'}, 900, function(){
+		$(this).animate({color: 'red'}, 1100, function(){
 			$(this).animate({color: 'white'});
 		});
 		$('#face').fadeTo('slow', 1);

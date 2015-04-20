@@ -13,16 +13,16 @@ function validate_age() {
 		alert("Please enter a valid birthdate");
 	} else if  (age_year < 18) {
 		alert("Sorry, we can't let you in if you're under 18. Thanks for understanding!");
-		//underAge();
+		redirectUnderAge();
 	} else {
 		alert("You're good to go!");
-		//legalAge();	
+		redirectLegalAge();	
 	}
 	
 }
 
 var birthDate = function() {
-	var num = /\d+/;
+	var num = /\d+/; // \d+ is a regular expression which finds all numbers in a string and returns an array of strings
 
 	var mm = document.getElementById('month').value;
 	var dd = document.getElementById('day').value;
@@ -37,11 +37,11 @@ var birthDate = function() {
 	return dateNum
 }
 
-var legalAge = function() {
+var redirectLegalAge = function() {
 	window.location.href = main_url;
 }
 
-var underAge = function() {
+var redirectUnderAge = function() {
 	window.location.href = under_url;
 }
 
