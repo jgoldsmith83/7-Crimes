@@ -3,31 +3,19 @@ var menu = function() {
 	$('#face').mouseover(function() {
 		$(this).fadeTo('slow', 0.4);
 		//$('#menu:hidden').show(1000);
-<<<<<<< HEAD
 	$('#home').fadeTo('fast', 1, function() {
-		$('#who').fadeTo('fast', 1, function() {
-			$('#premium').fadeTo('fast', 1, function() {
-				$('#standard').fadeTo('fast',1, function() {
-					$('#order-info').fadeTo('fast', 1, function(){
-						$('#contact').fadeTo('fast', 1, function(){
-						})
-					})
-
-=======
-		$('#home').fadeTo('fast', 1, function() {
-			$('#premium').fadeTo('fast', 1, function() {
-				$('#standard').fadeTo('fast',1, function() {
-					$('#order-info').fadeTo('fast', 1, function(){
-						$('#contact').fadeTo('fast', 1);
-					})
->>>>>>> 0b61a1e1fda61015f42effed52ddff4a829fc0a7
+		$('#premium').fadeTo('fast', 1, function() {
+			$('#standard').fadeTo('fast',1, function() {
+				$('#order-info').fadeTo('fast', 1, function(){
+					$('#contact').fadeTo('fast', 1);
 				})
 			})
-		});
+		})
+	});
 	}); 
 	
 	$('li').click(function() {
-		$(this).animate({color: 'red'}, 900, function(){
+		$(this).animate({color: 'red'}, 1100, function(){
 			$(this).animate({color: 'white'});
 		});
 		$('#face').fadeTo('slow', 1);
@@ -42,41 +30,36 @@ var homeClick = function() {
 		reformMainDiv(selection);
 	});
 }
-var whoClick = function() {
-	$('#who').click(function() {
-		var selection = document.getElementsByTagName('li')[1].id;
-		reformMainDiv(selection);
-	});
-}
+
 var premiumClick = function() {
 	$('#premium').click(function() {
-		var selection = document.getElementsByTagName('li')[2].id;
+		var selection = document.getElementsByTagName('li')[1].id;
 		reformMainDiv(selection);
 	});
 }
 
 var standardClick = function () {
 	$('#standard').click(function() {
-		var selection = document.getElementsByTagName('li')[3].id;
+		var selection = document.getElementsByTagName('li')[2].id;
 		reformMainDiv(selection);
 	});
 }
 
 var orderClick = function() {
 	$('#order-info').click(function() {
-		var selection = document.getElementsByTagName('li')[4].id;
+		var selection = document.getElementsByTagName('li')[3].id;
 		reformMainDiv(selection);
 	});
 }
 
 var contactClick = function() {
 	$('#contact').click(function() {
-		var selection = document.getElementsByTagName('li')[5].id;
+		var selection = document.getElementsByTagName('li')[4].id;
 		reformMainDiv(selection);
 	});
 }
 
-var actionHandlers = [menu, whoClick, homeClick, premiumClick, standardClick, orderClick, contactClick];
+var actionHandlers = [menu, homeClick, premiumClick, standardClick, orderClick, contactClick];
 
 $(document).ready(actionHandlers);
 
@@ -96,13 +79,6 @@ function reformMainDiv(selectionAttrib) {
 			titleChange.innerHTML = "7 Crimes. An eJuice Co.";
 			change.innerHTML = "IT'S COMING.";
 			h3.innerHTML = "Curators of Fine eJuice.";
-			break;
-		case 'who':
-			contentDiv.innerhtml = ""; //7 Crimes. Who we are.";
-
-			titleChange.innerHTML ="7 Crimes. Who we are.";
-			change.innerHTML = "About us";
-			h3.innerHTML = "We are who we are";
 			break;
 		case 'premium':
 			contentDiv.innerhtml = ""; //reload div content
