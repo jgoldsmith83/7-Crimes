@@ -10,7 +10,16 @@ var legalAge = function() {
 var underAge = function() {
 	window.location.href = under_url;
 }
+//moved var birthDate to top, just trying a idea.
+var birthDate = function() {
+	var mm = document.getElementById('month').value;
+	var dd = document.getElementById('day').value;
+	var yyyy = document.getElementById('year').value;
 
+	var date = mm + "/" + dd + "/" + yyyy;
+
+	return date;
+}
 
 function validate_age() {
 	//var age_year = parseInt(document.getElementById("year").value);
@@ -26,15 +35,6 @@ function validate_age() {
 	//}
 }
 
-var birthDate = function() {
-	var mm = document.getElementById('month').value;
-	var dd = document.getElementById('day').value;
-	var yyyy = document.getElementById('year').value;
-
-	var date = mm + "/" + dd + "/" + yyyy;
-
-	return date;
-}
 
 /*
 var legal_age = function() {

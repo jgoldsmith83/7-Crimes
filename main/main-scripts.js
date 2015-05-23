@@ -4,10 +4,14 @@ var menu = function() {
 		$(this).fadeTo('slow', 0.4);
 		//$('#menu:hidden').show(1000);
 	$('#home').fadeTo('fast', 1, function() {
-		$('#premium').fadeTo('fast', 1, function() {
-			$('#standard').fadeTo('fast',1, function() {
-				$('#order-info').fadeTo('fast', 1, function(){
-					$('#contact').fadeTo('fast', 1);
+		$('#who').fadeTo('fast', 1, function() {
+			$('#premium').fadeTo('fast', 1, function() {
+				$('#standard').fadeTo('fast',1, function() {
+					$('#order-info').fadeTo('fast', 1, function(){
+						$('#contact').fadeTo('fast', 1);
+						})
+					})
+
 				})
 			})
 		})
@@ -30,7 +34,12 @@ var homeClick = function() {
 		reformMainDiv(selection);
 	});
 }
-
+var whoClick = function() {
+	$('#who').click(function() {
+		var selection = document.getElementsByTagName('li')[5].id;
+		reformMainDiv(selection);
+	});
+}
 var premiumClick = function() {
 	$('#premium').click(function() {
 		var selection = document.getElementsByTagName('li')[1].id;
@@ -59,7 +68,7 @@ var contactClick = function() {
 	});
 }
 
-var actionHandlers = [menu, homeClick, premiumClick, standardClick, orderClick, contactClick];
+var actionHandlers = [menu, whoClick, homeClick, premiumClick, standardClick, orderClick, contactClick];
 
 $(document).ready(actionHandlers);
 
@@ -79,6 +88,13 @@ function reformMainDiv(selectionAttrib) {
 			titleChange.innerHTML = "7 Crimes. An eJuice Co.";
 			change.innerHTML = "IT'S COMING.";
 			h3.innerHTML = "Curators of Fine eJuice.";
+			break;
+		case 'who':
+			contentDiv.innerhtml = ""; //7 Crimes. Who we are.";
+
+			titleChange.innerHTML ="7 Crimes. Who we are.";
+			change.innerHTML = "About us";
+			h3.innerHTML = "We are who we are";
 			break;
 		case 'premium':
 			contentDiv.innerhtml = ""; //reload div content
