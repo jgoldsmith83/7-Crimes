@@ -8,7 +8,7 @@ var menu = function() {
 			$('#premium').fadeTo('fast', 1, function() {
 				$('#standard').fadeTo('fast',1, function() {
 					$('#order-info').fadeTo('fast', 1, function(){
-						$('#contact').fadeTo('fast', 1);
+						$('#contact').fadeTo('fast', 1, function(){
 						})
 					})
 
@@ -36,34 +36,34 @@ var homeClick = function() {
 }
 var whoClick = function() {
 	$('#who').click(function() {
-		var selection = document.getElementsByTagName('li')[5].id;
+		var selection = document.getElementsByTagName('li')[1].id;
 		reformMainDiv(selection);
 	});
 }
 var premiumClick = function() {
 	$('#premium').click(function() {
-		var selection = document.getElementsByTagName('li')[1].id;
+		var selection = document.getElementsByTagName('li')[2].id;
 		reformMainDiv(selection);
 	});
 }
 
 var standardClick = function () {
 	$('#standard').click(function() {
-		var selection = document.getElementsByTagName('li')[2].id;
+		var selection = document.getElementsByTagName('li')[3].id;
 		reformMainDiv(selection);
 	});
 }
 
 var orderClick = function() {
 	$('#order-info').click(function() {
-		var selection = document.getElementsByTagName('li')[3].id;
+		var selection = document.getElementsByTagName('li')[4].id;
 		reformMainDiv(selection);
 	});
 }
 
 var contactClick = function() {
 	$('#contact').click(function() {
-		var selection = document.getElementsByTagName('li')[4].id;
+		var selection = document.getElementsByTagName('li')[5].id;
 		reformMainDiv(selection);
 	});
 }
