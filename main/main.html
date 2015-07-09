@@ -4,14 +4,13 @@
 
 <html>
 <head>
-	<meta charset="UTF-8"></meta>
-		<title>7 Crimes. An eJuice Co.</title>
-			<link rel="stylesheet" href="main-style.css">
-				<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-				<script type="text/javascript" src="jQueryRotate.js"></script>
-				<script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-				<!--<script type="text/javascript" src="/www/sevencrimes.com/jquery-1.7.1.min.js"></script>--> <!--Why was this killed off?-->
-				<script type="text/javascript" src="main-scripts.js"></script>
+    <title>7 Crimes. An eJuice Co.</title>
+    <link rel="stylesheet" href="main-style.css">
+    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="jQueryRotate.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!--<script type="text/javascript" src="/www/sevencrimes.com/jquery-1.7.1.min.js"></script>--> <!--Why was this killed off?-->
+    <script type="text/javascript" src="main-scripts.js"></script>
 </head>
 <body bgcolor="black">
 	<div id="static-logo">
@@ -30,12 +29,12 @@
 
 	<p>
 		<ul id="list">
-			<li id="home" class="liAnim"><a href="#" class="links">Home. </a></li><br>
-			<li id="who"  class="liAnim"><a href="#" class="links">Who. </a></li><br>
-			<li id="premium" class="liAnim"><a href="#" class="links">Premium Line. </a></li><br>
-			<li id="standard" class="liAnim"><a href="#" class="links">Standard Line. </a></li><br>
-			<li id="order-info" class="liAnim"><a href="#" class="links">Ordering Info. </a></li><br>
-			<li id="contact" class="liAnim"><a href="#" class="links">Contact Us. </a></li><br>
+			<li id="home" class="liAnim"><a href="home.html" target="content-div" class="links">Home. </a></li>
+			<li id="who"  class="liAnim"><a href="who/who.html" target="content-div" class="links">Who Are We? </a></li>
+			<li id="premium" class="liAnim"><a href="#" class="links">Premium Line. </a></li>
+			<li id="standard" class="liAnim"><a href="#" class="links">Standard Line. </a></li>
+			<li id="order-info" class="liAnim"><a href="#" class="links">Ordering Info. </a></li>
+			<li id="contact" class="liAnim"><a href="contact/contact.html" target="content-div" class="links">Contact Us. </a></li>
 		</ul>
 	</p>
 </div>
@@ -43,23 +42,12 @@
 <div id="disclaimer">
 <b id="disclaimer-text">
 MUST BE 18+
+    <br>
+&copy;DotSlashDesigns 2015
 </b>
 </div>
 
 
-<!--<iframe src="#description" frameborder="0" id="content-div">-->
-<div id="content-div">
-	<div id="background-div">
-	
-	</div>
-	<p id="description">
-		IT'S COMING.
-		<br><br>
-		For inquiries:
-		<br>
-		Send us an <a href="mailto:james@sevencrimes.com?Subject=Web%20Inquiry" target="_top">Email</a>
-	</p>
-</div>
-<!--</iframe>-->
+<iframe src="home.html" frameborder="0" id="content-div" name="content-div"></iframe>
 </body>
 </html>

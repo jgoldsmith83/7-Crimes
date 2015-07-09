@@ -1,5 +1,4 @@
 
-
 #title-div {
 	background-color:#000000;
 	//float:right;
@@ -15,13 +14,13 @@ h1 {
 	margin:0;
 	padding:0;
 	float: left;
-	margin-left: 0;
+	margin-left: -9;
 	margin-top: -1;
 	margin-bottom: -2;
 	font-family: 'Broadway';
 	border-style: solid;
 	border-color: 'white';
-	border-width: 0.01;
+	border-width: 1;
 	z-index: -1;	
 }
 
@@ -37,7 +36,7 @@ h3 {
 	font-family: 'Script';
 	border-style: solid;
 	border-color: 'white';
-	border-width: 0.01;
+	border-width: 1;
 	z-index: -1;
 }
 
@@ -57,7 +56,7 @@ h3 {
 	-moz-border-radius-bottomleft: 5px;
 	//order-style: solid;
 	//border-color: white;
-	//border-width: 0.01;
+	//border-width: 1;
 	z-index: -1;
 }
 
@@ -86,7 +85,7 @@ ul {
 	margin-left: 50%;
 	//border-style: solid;
 	//border-color: white;
-	//border-width: 0.01;
+	//border-width: 1;
 }
 
 .logo {
@@ -117,22 +116,34 @@ ul {
 
 #list {
 	//border-left: 0;
-	margin-left: -6%;
-	margin-top: 10%;
+	margin-left: -16%;
+	margin-top: 15%;
 	border-style: solid;
 	border-color: 'white';
-	border-width: 0.01;
+	border-width: 1;
 	z-index: -1;
 	opacity: 1;
 	//display: block;
 }
 
+#list li {
+    margin-bottom: 10px;   
+}
+
 #disclaimer {
 	position: absolute;
 	color: #ffffff;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1;
 	bottom: 0;
-	margin-bottom: 0;
-	margin-left: 20;
+	margin-bottom: 98;
+	margin-left: 37;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 
 #content-div {
@@ -145,25 +156,14 @@ ul {
 	float: right;
 	width: 88.8%;
 	height: 95%;
-	margin-left:-10;
-	margin-right:10;
+	margin-left: -10;
+	margin-right: 10;
 	margin-top: -2;
 	margin-bottom:-100;
 	padding:0;
 	overflow-y: auto;
 	overflow-x: hidden;
 	//display: none;
-}
-
-#background-div {
-	width: 100%;
-	height: 80%;
-	background-image: url('../images/Face_only_full_bg.png');
-	background-repeat: no-repeat;
-	background-position: center center;
-	margin: 0 0 0 5;
-	padding: 0;
-	border: 0;
 }
 
 #parent-div {
@@ -184,25 +184,10 @@ ul {
 	align: center;
 }
 
-#description {
-	font-family: Broadway;
-	z-index: 10;
-	width: auto;
-	height: auto;
-	position: absolute;
-	margin-top: 0;
-	margin-left: 46%;
-}
-
-#labelp {
-	margin-left: -15%;
-	align: center;
-}
-
 .liAnim {
 	border-style: solid;
 	border-color: 'white';
-	border-width: 0.01;
+	border-width: 1;
 }
 
 .links {
@@ -216,3 +201,6 @@ ul {
 	width: 200;
 	height: 200;
 }
+
+
+

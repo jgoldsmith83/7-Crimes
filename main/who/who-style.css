@@ -1,0 +1,32 @@
+h1 {
+    
+    margin-left: 65px;
+}
+
+hr {
+    margin-left: 5%;
+}
+
+#welcome {
+    width: 1000px;
+    border: 3;
+    margin-left: 5%;
+}
+
+#info {
+    margin-left: 5%;
+}
+
+li {
+    border-style: none;
+    border-color: #000000;
+    border-width: 1;
+    list-style-type: none;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+#content {
+    width: 1000px;
+    margin-left: 5%;
+}

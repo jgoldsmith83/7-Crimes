@@ -3,7 +3,7 @@ var under_url = "http://www.thetruth.com"
 var currYear = new Date().getFullYear();
 
 
-<<<<<<< HEAD
+
 var legalAge = function() {
 	window.location.href = main_url;
 }
@@ -21,8 +21,6 @@ var birthDate = function() {
 
 	return date;
 }
-=======
->>>>>>> 0b61a1e1fda61015f42effed52ddff4a829fc0a7
 
 function validate_age() {
 	var age_year = birthDate(); // assigns the return value of birthDate() to a variable
@@ -41,8 +39,6 @@ function validate_age() {
 	
 }
 
-<<<<<<< HEAD
-=======
 var birthDate = function() {
 	var num = /\d+/; // \d+ is a regular expression which finds all numbers in a string
 
@@ -58,7 +54,6 @@ var birthDate = function() {
 
 	return dateNum; // returns the number converted from the string at dateSplit[0]
 }
->>>>>>> 0b61a1e1fda61015f42effed52ddff4a829fc0a7
 
 var redirectLegalAge = function() {
 	window.location.href = main_url; // reloads the browser window at the url specified
